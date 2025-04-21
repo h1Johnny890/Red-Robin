@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Red Robin</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #b20000;
+      margin: 60px 0 20px 80px;
+    }
+    .food-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin: 0 60px 80px;
+    }
+    .food-card {
+      width: 250px;
+      text-align: center;
+      background-color: #fff5eb;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      padding: 20px;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.6s ease-in-out;
+    }
+    .food-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    .food-card h3 {
+      color: #d62828;
+    }
+    .drop-in {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="rrlogo.jpg" alt="Red Robin Logo" class="rr">
+    </div>
+    <nav class="nav-links">
+      <a href="#" class="active">MENU</a>
+      <a href="https://www.redrobin.com/rewards" class="active">REWARDS</a>
+      <a href="https://www.redrobin.com/find-us" class="active">FIND US</a>
+      <a href="https://www.redrobin.com/bottomlessly-yours" class="active">BOTTOMLESSLY YOURS</a>
+      <a href="https://www.redrobin.com/catering" class="active">CATERING</a>
+      <a href="https://www.redrobin.com/jobs-and-careers" class="active">CAREERS</a>
+      <a href="https://www.redrobin.com/gift-cards" class="active">GIFT CARDS</a>
+    </nav>
+    <div class="header-right">
+      <i class="fas fa-search search-icon"></i>
+      <i class="fas fa-shopping-cart cart-icon"></i>
+      <a href="https://www.redrobin.com/account/login"><button class="sign-in-btn">Sign in</button></a>
+    </div>
+  </header>
+
+  <section class="main-section">
+    <div class="main-left">
+      <h1 class="main-heading">
+        Savor Every Bite <br>
+        with Our <span style="color: #d62828;">Handcrafted Burgers</span> 
+      </h1>
+      <p class="main-subheading">Fresh Ingredients, Bold Flavors<br>Crafted Just For You</p>
+      <div class="main-buttons">
+        <a href="#food-section"><button class="explore-btn">Explore Menu</button></a>
+        <a href="https://www.youtube.com/RedRobinBurgers"><button class="play-video-btn">
+          <i class="fas fa-play"></i>
+          Watch Video
+        </button></a>
+      </div>
+    </div>
+    <div class="main-right">
+      <img src="profile.png" width="400px" alt="Burger" class="burger-image">
+      <div class="discount-tag">20% off</div>
+      <div class="delivery-options">
+        <div class="delivery-option">
+          <i class="fas fa-truck delivery-icon"></i>
+          <div class="delivery-text">
+            <h3>Lightning Delivery</h3>Hot & Fresh in 30 Mins
+          </div>
+        </div>
+        <div class="delivery-option">
+          <i class="fas fa-box-open delivery-icon"></i>
+          <div class="delivery-text">
+            <h3>Dine-In Ready</h3>Enjoy At Your Table
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-us-section">
+    <h2>About Us</h2>
+    <p><em><strong>
+      At Red Robin, we’re all about serving delicious, handcrafted burgers made from the freshest ingredients. 
+      Our passion is creating craveable food with bold flavors and memorable experiences — whether you're dining in, 
+      ordering online, or grabbing something to-go. Come for the food, stay for the flavor!
+    </p></strong></em>
+  
+    <div class="about-icons">
+      <div class="about-icon">
+        <i class="fa-solid fa-user-group"></i>
+        <h3>Community Favorite</h3>
+        <p><em><strong>Red Robin is a place where families and friends gather. We're proud to be a well-loved staple in communities across the country.</p></strong></em>
+      </div>
+      <div class="about-icon">
+        <i class="fa-solid fa-burger"></i>
+        <h3>40+ Years of Flavor</h3>
+        <p><em><strong>We’ve been serving gourmet burgers and bold meals since the 1960s — always fresh, always satisfying.</p></strong></em>
+      </div>
+      <div class="about-icon">
+        <i class="fa-solid fa-heart"></i>
+        <h3>Giving Back</h3>
+        <p><em><strong>Red Robin is committed to giving back — through charity events, fundraisers, and supporting local causes that matter.</p></strong></em>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <!-- New Sections: Food Categories -->
+  <h2 class="section-title"><em><strong>Burgers</h2></strong></em>
+  <section class="food-section" id="burgers">
+    <div class="food-card">
+        <img src="burger1.jpg">
+        <h3>Jalapeño Heatwave Burger</h3>
+        <p>$19.39 | 1080 cal.</p>
+        <p class="desc">Served with your choice of side. It’s a slow burn. Topped with pepper-jack, grilled jalapeno, caramelized onion, green chili aioli, fresh smashed avocado and crispy fried jalapeño.</p>
+        <button class="order-btn">Order Now</button>
+      </div> 
+
+      <div class="food-card">
+        <img src="burger2.jpg">
+        <h3>Bacon Cheeseburger</h3>
+        <p>$17.39 | Cal 950</p>
+        <p class="desc">Served with your choice of side. Hardwood-smoked bacon, lettuce, tomato, mayo and</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+      
+      <div class="food-card">
+        <img src="burger3.jpg">
+        <h3>Whiskey River® BBQ</h3>
+        <p>$16.79 | Cal 1180</p>
+        <p class="desc">Served with your choice of side. Our signature Whiskey River® BBQ Sauce, crispy onion straws, cheddar, lettuce, tomato and</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <div class="food-card">
+        <img src="burger4.jpg">
+        <h3>Royal Red Robin®</h3>
+        <p>$18.39 | 1130 cal.</p>
+        <p class="desc">Served with your choice of side. It’s a classic! Sunny-side up egg?, hardwood-smoked bacon, American cheese, lettuce, tomato and mayo.</p>
+        <button class="order-btn">Order Now</button>
+      </div> 
+
+      <div class="food-card">
+        <img src="burger5.jpg">
+        <h3>Red Robin Gourmet Cheeseburger</h3>
+        <p>$16.39 | 860 cal.</p>
+        <p class="desc">Served with your choice of side. Pickle relish, onion, pickles, lettuce, tomato, mayo and your choice of cheese.</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+      
+      <div class="food-card">
+        <img src="burger6.jpg">
+        <h3>New Buzzer Beater Bacon Cheeseburger Double - Two Pointer</h3>
+        <p>$20.99 | 1380 cal.</p>
+        <p class="desc">Served with your choice of side. Don't miss your shot to try this classic! Stacked high with two juicy patties, four strips of hardwood-smoked bacon, four slices of American cheese and dribbled with Red's Secret Tavern SauceTM.</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <div class="food-card">
+        <img src="burger7.jpg">
+        <h3>New Buzzer Beater Bacon Cheeseburger Triple - Three Pointer</h3>
+        <p>$23.99 | 1830 cal.</p>
+        <p class="desc">Served with your choice of side. Don't miss your shot to try this classic! Stacked even higher with three juicy patties, four strips of hardwood-smoked bacon, six slices of American cheese and dribbled with Red's Secret Tavern SauceTM.</p>
+        <button class="order-btn">Order Now</button>
+      </div> 
+
+      <div class="food-card">
+        <img src="burger8.jpg">
+        <h3>Banzai</h3>
+        <p>$16.59 | 1000 cal.</p>
+        <p class="desc">Served with your choice of side. Say aloha to our teriyaki-glazed patty topped with grilled fresh pineapple, cheddar, lettuce, tomato and mayo.</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+      
+      <div class="food-card">
+        <img src="burger9.jpg">
+        <h3>Sauteed 'Shroom</h3>
+        <p>$17.39 | 920 cal.</p>
+        <p class="desc">Served with your choice of side. A mound of fresh, sautéed garlic mushrooms, covered with melty Swiss. Topped with roasted garlic aioli.</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <div class="food-card">
+        <img src="burger10.jpg">
+        <h3>Smashed Avocado N' Bacon</h3>
+        <p>$17.99 | 940 cal.</p>
+        <p class="desc">Served with your choice of side. Freshly smashed avocado with red pepper flakes, hardwood-smoked bacon, Swiss, onion, lettuce, tomato and mayo.</p>
+        <button class="order-btn">Order Now</button>
+      </div> 
+
+      <div class="food-card">
+        <img src="burger11.jpg">
+        <h3>Bleu Ribbon</h3>
+        <p>$17.29 | 1050 cal.</p>
+        <p class="desc">Served with your choice of side. Heinz® 57 Steak Sauce, bleu cheese crumbles, crispy onion straws, chipotle aioli, lettuce and tomato.</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+      
+      <div class="food-card">
+        <img src="burger12.jpg">
+        <h3>The Southern Charm</h3>
+        <p>$18.19 | 1210 cal.</p>
+        <p class="desc">Served with your choice of side. Crush on this: candied bacon, Whiskey River® BBQ Sauce, cheddar, caramelized onion, lettuce, mayo.</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <div class="food-card">
+        <img src="burger13.jpg">
+        <h3>Smoke & PepperTM</h3>
+        <p>$18.19 | 810 cal.</p>
+        <p class="desc">Served with your choice of side. This combo of black-peppered bacon, cheddar, lettuce, pickles and Smoke & PepperTM ketchup is smokin’.</p>
+        <button class="order-btn">Order Now</button>
+      </div> 
+
+      <div class="food-card">
+        <img src="burger14.jpg">
+        <h3>Monster</h3>
+        <p>$19.99 | 1310 cal.</p>
+        <p class="desc">Served with your choice of side. What’s better than one juicy patty? Two! Served with your choice of cheese, pickle relish, onion, pickles, lettuce, tomato and mayo.</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+      
+      <div class="food-card">
+        <img src="burger15.jpg">
+        <h3>Keep It Simple</h3>
+        <p>$15.99 | 590 cal.</p>
+        <p class="desc">Served with your choice of side. Your choice of a beef patty, chicken breast or ancient grain veggie patty served with pickles, onion, lettuce and tomato.</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <div class="food-card">
+        <img src="burger16.jpg">
+        <h3>Madlove</h3>
+        <p>$19.39 | 1150 cal.</p>
+        <p class="desc">Served with your choice of side. Loaded with pepper-jack, Swiss, cheddar-and-Parmesan crisp, sweet jalapeño relish, candied bacon, freshly smashed avocado with red pepper flakes, lettuce, tomato and onion.</p>
+        <button class="order-btn">Order Now</button>
+      </div> 
+
+      <div class="food-card">
+        <img src="burger17.jpg">
+        <h3>Cheesy Bacon Fondue</h3>
+        <p>$19.19 | 1320 cal.</p>
+        <p class="desc">Served with your choice of side.. Hardwood-smoked bacon, American cheese and mayo. Served with New Belgium Fat Tire® Beer Cheese Bacon Fondue for dipping.</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+      
+      <div class="food-card">
+        <img src="burger18.jpg">
+        <h3>Scorpion</h3>
+        <p>$18.29 | 1030 cal.</p>
+        <p class="desc">Served with your choice of side. Topped with pepper-jack, crispy jalapeño, Scorpion Sauce, pickles, hot rings, lettuce, tomato and roasted garlic aioli.</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <div class="food-card">
+        <img src="burger19.jpg">
+        <h3>Lava Queso</h3>
+        <p>$19.39 | 1060 cal.</p>
+        <p class="desc">Served with your choice of side. This burger comes with our rich, cheesy Queso Fundido with house-made chorizo oozing over chipotle aioli, caramelized onion, grilled jalapeño and tomato.</p>
+        <button class="order-btn">Order Now</button>
+      </div> 
+
+      <div class="food-card">
+        <img src="burger20.jpg">
+        <h3>Gold Medal Burger</h3>
+        <p>$21.19 | 1770 cal.</p>
+        <p class="desc">Served with your choice of side. Our Gold Medal Burger is the pinnacle of mouth-watering accomplishments with three juicy patties, three layers of cheese, Red’s relish, mayo, pickles, yellow onion, lettuce and tomato.</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+      
+  </section>
+
+  <h2 class="section-title"><em><strong>Wraps And Sandwiches</h2></strong>></em>
+  <section class="food-section" id="wraps">
+    <div class="food-card">
+        <img src="sandwich1.jpg">
+        <h3>Mike's Hot Honey® Chicken Sandwich</h3>
+        <p>$17.59 | 1000 cal.</p>
+        <p class="desc">Served with your choice of side. Our hand-breaded, fried chicken breast dripping with Mike’s Hot Honey® and layered with green chili aioli, fresh jalapeño and shredded cabbage mix.</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+    <div class="food-card">
+        <img src="wrap1.jpg">
+        <h3>Everything Chicken Caesar Wrap</h3>
+        <p>$16.59 | 840 cal.</p>
+        <p class="desc">Grilled chicken breast, crisp romaine, shaved Parmesan and tomato with our house-made Everything Caesar dressing wrapped in a flour tortilla.</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+    <div class="food-card">
+        <img src="warp2.jpg">
+        <h3>Whiskey River® BBQ Chicken Wrap</h3>
+        <p>$16.59 | 900 cal</p>
+        <p class="desc">Served with your choice of side. Enjoy the flavors of our sliced chicken breast and signature Whiskey River® BBQ Sauce, cheddar, lettuce, tortilla strips and ranch in a flour tortilla.</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+    <div class="food-card">
+        <img src="sandwich2.jpg">
+        <h3>Crispy Chicken Sandwich</h3>
+        <p>$16.99 | 920 cal.</p>
+        <p class="desc">Served with your choice of side. Simply perfect! Hand-breaded chicken breast fried golden brown and served with pickles, lettuce, tomato and mayo.</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <div class="food-card">
+        <img src="warp2.jpg">
+        <h3>Crispy Chicken Wrap</h3>
+        <p>$16.99 | 1100 cal.</p>
+        <p class="desc">Served with your choice of side. Get wrapped up in the flavors of juicy chicken strips, hardwood-smoked bacon, ranch, cheddar, lettuce and tomato, wrapped in a flour tortilla.</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <div class="food-card">
+        <img src="sandwich3.jpg">
+        <h3>Whiskey River® BBQ Chicken Sandwich</h3>
+        <p>$17.59 | 950 cal.</p>
+        <p class="desc">Served with your choice of side. Our famous Whiskey River® BBQ Sauce, crispy onion straws, cheddar, lettuce, tomato and mayo.</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <div class="food-card">
+        <img src="sandwich4.jpg">
+        <h3>California Chicken Sandwich</h3>
+        <p>$17.99 | 710 cal.</p>
+        <p class="desc">Served with your choice of side. This flavor comes in waves. With freshly smashed avocado with red pepper flakes, hardwood-smoked bacon, Swiss, pickles, lettuce, tomato and mayo.</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <div class="food-card">
+        <img src="sandwich5.jpg">
+        <h3>BLTA Croissant</h3>
+        <p>$17.69 | 710 cal</p>
+        <p class="desc">Served with your choice of side. A hearty pairing of turkey, hardwood-smoked bacon and avocado on a croissant, with lettuce, tomato and mayo.</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <div class="food-card">
+        <img src="sanwich6.jpg">
+        <h3>Teriyaki Chicken Sandwich</h3>
+        <p>$17.59 | 780 cal.</p>
+        <p class="desc">Served with your choice of side. Get your glaze on with the sweet, tangy combo of teriyaki, grilled fresh pineapple and Swiss. Served with lettuce, tomato and mayo.</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+  </section>
+
+  <h2 class="section-title"><em><strong>Salads</h2></strong></em>
+  <section class="food-section" id="salads">
+    <div class="food-card">
+        <img src="salad1.jpg">
+        <h3>Everything Chicken Caesar Salad</h3>
+        <p>$17.59 | 780 cal.</p>
+        <p class="desc">Grilled chicken breast on a bed of crisp romaine tossed in house-made Everything Caesar dressing. Topped with shaved Parmesan and smashed croutons.</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <div class="food-card">
+        <img src="salad2.jpg">
+        <h3>House Salad</h3>
+        <p>$8.59 | 80 cal.</p>
+        <p class="desc">Diced tomato, English cucumber, shredded cheddar cheese and croutons on mixed greens with choice of dressing. Does not include calories from dressing.</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <div class="food-card">
+        <img src="sala3.jpg">
+        <h3>Avo-Cobb-O Salad</h3>
+        <p>$17.79 | 550 cal..</p>
+        <p class="desc">Grilled chicken breast, hardwood-smoked bacon, fresh avocado, bleu cheese crumbles, hard-boiled eggs, tomato and croutons on mixed greens with your choice of dressing. Does not include calories from dressing.</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <div class="food-card">
+        <img src="salad4.jpg">
+        <h3>Crispy Chicken Strips Salad</h3>
+        <p>$16.99 | 840 cal.</p>
+        <p class="desc">Chicken strips, hard-boiled eggs, hardwood-smoked bacon, tomato, croutons and cheddar served on mixed greens with your choice of dressing. Does not include calories from dressing.</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <div class="food-card">
+        <img src="salad5.jpg">
+        <h3>Simply Grilled Chicken Salad</h3>
+        <p>$16.79 | 290 cal.</p>
+        <p class="desc">This combo of grilled chicken breast, cheddar, tomato, croutons and cucumbers is oh, so simply satisfying. Served on mixed greens with your choice of dressing.</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <div class="food-card">
+        <img src="salad6.jpg">
+        <h3>Southwest Salad</h3>
+        <p>$17.59 | 780 cal.</p>
+        <p class="desc">Ancho-grilled chicken breast, black beans, avocado, fried jalapeño coins, tomato, corn, shredded cheddar, fresh lime and tortilla strips. Served on a bed of mixed greens with a side of salsa-ranch dressing.</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <div class="food-card">
+        <img src="salad7.jpg">
+        <h3>Side Everything Caesar Salad</h3>
+        <p>$8.59 | 390 cal.</p>
+        <p class="desc">Crisp romaine tossed in house-made everything Caesar dressing. Topped with shaved Parmesan and smashed croutons.</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+  </section>
+
+  <script>
+    window.addEventListener('load', () => {
+      // Select all elements you want to animate
+      const animatedItems = document.querySelectorAll(
+  'header, .main-section, .about-us-section, .section-title, .food-card, .food-section, footer'
+);
+
+  
+      animatedItems.forEach((el, i) => {
+        el.classList.add('drop-animate');
+        setTimeout(() => {
+          el.classList.add('drop-in');
+        }, i * 150);
+      });
+    });
+  </script>
+    
+    <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-info">
+            <p>&copy; 2025 Red Robin. All rights reserved.</p>
+            <p><a href="https://www.redrobin.com/privacy-policy">Privacy Policy</a> | <a href="https://www.redrobin.com/terms">Terms of Use</a></p>
+          </div>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/RedRobinBurgers/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/redrobinburgers/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com/redrobinburgers/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.youtube.com/RedRobinBurgers/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.tiktok.com/@redrobinburgers" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+      </footer>
+      
+</body>
+<script>
+    // Make all "Order Now" buttons link to the same order page
+    document.querySelectorAll('.order-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        window.location.href = 'https://www.redrobin.com/order';
+      });
+    });
+  </script>
+  
+</html>
